@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="ejercicio_copiaContacto.MainPage"
+    x:Class="ejercicio_copiaContacto.MainPage1"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:ejercicio_copiaContacto"
@@ -9,57 +9,61 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-            <!--Definicion del menu hamburguesa-->
-            <SplitView x:Name="splitPrincipal" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="400" Grid.Column="0">
+            <RelativePanel>
+                <Button Name="HamburgerButton" RelativePanel.AlignLeftWithPanel="True" FontSize="36" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Click="HamburgerButton_Click"/>
 
+               
+            </RelativePanel>
+            <SplitView Grid.Row="1"
+                       Name="MySplitView"
+                       DisplayMode="CompactOverlay"
+                       OpenPaneLength="280"
+                       CompactPaneLength="56">
                 <SplitView.Pane>
-                    <StackPanel Background="White">
-                        <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Width="50" Height="50" Background="Transparent" Click="HamburgerButton_Click"/>
-
-                        <StackPanel Orientation="Horizontal">
-                            <Button x:Name="MenuButton1" FontFamily="Segoe MDL2 Assets" Content="&#59259;" Width="50" Height="50" Background="Transparent"/>
-                            <TextBlock Text="Contactos" FontSize="18" VerticalAlignment="Center" />
-                        </StackPanel>
-
-                        <StackPanel Orientation="Horizontal">
-                            <Button x:Name="MenuButton2" FontFamily="Segoe MDL2 Assets" Content="&#59157;" Width="50" Height="50" Background="Transparent"/>
-                            <TextBlock Text="Correo" FontSize="18" VerticalAlignment="Center" />
-                        </StackPanel>
-
-                        <StackPanel Orientation="Horizontal">
-                            <Button x:Name="MenuButton3" FontFamily="Segoe MDL2 Assets" Content="&#59271;" Width="50" Height="50" Background="Transparent"/>
-                            <TextBlock Text="Calendario" FontSize="18" VerticalAlignment="Center" />
-                        </StackPanel>
-
-                        <StackPanel Orientation="Horizontal">
-                            <Button x:Name="MenuButton4" FontFamily="Segoe MDL2 Assets" Content="&#59155;" Width="50" Height="50" Background="Transparent"/>
-                            <TextBlock Text="Configuración" FontSize="18" VerticalAlignment="Center" />
-                        </StackPanel>
-                    </StackPanel>
+                    <ListBox SelectionMode="Single">
+                        <ListBoxItem Name="Contactos">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets"
+                                           FontSize="36"
+                                           Text="&#xE77B;"/>
+                                <TextBlock FontSize="24" Margin="20,0,0,0">Contactos</TextBlock>
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem Name="Correo">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets"
+                                           FontSize="36"
+                                           Text="&#xE715;"/>
+                                <TextBlock FontSize="24" Margin="20,0,0,0">Correo</TextBlock>
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem Name="Calendario">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets"
+                                           FontSize="36"
+                                           Text="&#xE787;"/>
+                                <TextBlock FontSize="24" Margin="20,0,0,0">Calendario</TextBlock>
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem Name="Configuracion">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets"
+                                           FontSize="36"
+                                           Text="&#xE713;"/>
+                                <TextBlock FontSize="24" Margin="20,0,0,0">Configuración</TextBlock>
+                            </StackPanel>
+                        </ListBoxItem>
+                    </ListBox>
                 </SplitView.Pane>
+                <SplitView.Content>
+                    <Frame Name="MyFrame"/>
+                </SplitView.Content>
             </SplitView>
-
-            <Grid Grid.Column="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <TextBlock Text="Contactos" Grid.Row="0" Grid.Column="0" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <AppBarButton Icon="Add"  Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <TextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" PlaceholderText="Buscar"></TextBox>
-            </Grid>
         </Grid>
     </Grid>
 </Page>
