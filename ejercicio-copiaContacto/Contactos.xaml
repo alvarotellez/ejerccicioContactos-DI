@@ -13,7 +13,7 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Grid Grid.Column="0">
+            <Grid Grid.Column="0" Background="#FFF2F2F2">
                 <Grid.ColumnDefinitions>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
@@ -21,12 +21,14 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <RelativePanel  Grid.Row="0" Grid.Column="0">
-                    <TextBlock Name="txtContacto" Text="Contactos" FontSize="32" Margin="50,0,200,0"/>
-                    <AppBarButton Icon="Add" HorizontalAlignment="Right" RelativePanel.RightOf="txtContacto" VerticalAlignment="Center"/>
+                <RelativePanel Grid.Row="0" Grid.Column="0">
+                    <TextBlock Name="txtContacto" Text="Contactos" FontSize="32" Margin="50,0,200,0" Padding="5"/>
+                    <AppBarButton Icon="Add" RelativePanel.RightOf="txtContacto"/>
                 </RelativePanel>
-                <TextBox Grid.Row="1" FontSize="34" PlaceholderText="Buscar" Margin="50,20,20,20" Height="50" Width="450"/>
+                <TextBox Grid.Row="1" FontSize="24" PlaceholderText="Buscar" Margin="50,20,30,20" Height="50" Width="450" Padding="5"/>
             </Grid>
+            <!--Aqui iria el detalle-->
+            <AppBarButton Grid.Column="1" Icon="Calculator"/>
         </Grid>
     </Grid>
 </Page>
