@@ -15,47 +15,45 @@
             </Grid.RowDefinitions>
 
             <RelativePanel>
-                <Button Name="HamburgerButton" RelativePanel.AlignLeftWithPanel="True" FontSize="36" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Click="HamburgerButton_Click"/>
-
-               
+                <Button Name="HamburgerButton" RelativePanel.AlignLeftWithPanel="True" FontSize="24" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Click="HamburgerButton_Click"/>
             </RelativePanel>
             <SplitView Grid.Row="1"
                        Name="MySplitView"
                        DisplayMode="CompactOverlay"
-                       OpenPaneLength="280"
+                       OpenPaneLength="300"
                        CompactPaneLength="56">
                 <SplitView.Pane>
                     <ListBox SelectionMode="Single">
                         <ListBoxItem Name="Contactos">
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock FontFamily="Segoe MDL2 Assets"
-                                           FontSize="36"
-                                           Text="&#xE77B;"/>
-                                <TextBlock FontSize="24" Margin="20,0,0,0">Contactos</TextBlock>
+                                <TextBlock FontFamily="Segoe MDL2 Assets"                                       
+                                           Text="&#xE77B;"
+                                           Style="{StaticResource estiloBotones}"/>
+                                <TextBlock FontSize="18" Margin="20,0,0,0">Contactos</TextBlock>
                             </StackPanel>
                         </ListBoxItem>
                         <ListBoxItem Name="Correo">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock FontFamily="Segoe MDL2 Assets"
-                                           FontSize="36"
-                                           Text="&#xE715;"/>
-                                <TextBlock FontSize="24" Margin="20,0,0,0">Correo</TextBlock>
+                                           Text="&#xE715;"
+                                           Style="{StaticResource estiloBotones}"/>
+                                <TextBlock FontSize="18" Margin="20,0,0,0">Correo</TextBlock>
                             </StackPanel>
                         </ListBoxItem>
                         <ListBoxItem Name="Calendario">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock FontFamily="Segoe MDL2 Assets"
-                                           FontSize="36"
-                                           Text="&#xE787;"/>
-                                <TextBlock FontSize="24" Margin="20,0,0,0">Calendario</TextBlock>
+                                           Text="&#xE787;"
+                                           Style="{StaticResource estiloBotones}"/>
+                                <TextBlock FontSize="18" Margin="20,0,0,0">Calendario</TextBlock>
                             </StackPanel>
                         </ListBoxItem>
                         <ListBoxItem Name="Configuracion">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock FontFamily="Segoe MDL2 Assets"
-                                           FontSize="36"
-                                           Text="&#xE713;"/>
-                                <TextBlock FontSize="24" Margin="20,0,0,0">Configuración</TextBlock>
+                                           Text="&#xE713;"
+                                           Style="{StaticResource estiloBotones}"/>
+                                <TextBlock FontSize="18" Margin="20,0,0,0">Configuración</TextBlock>
                             </StackPanel>
                         </ListBoxItem>
                     </ListBox>
