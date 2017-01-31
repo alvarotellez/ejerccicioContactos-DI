@@ -11,8 +11,24 @@
     <Page.DataContext>
         <vm:clsMainPageVM></vm:clsMainPageVM>
     </Page.DataContext>
+
+
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup>
+            <VisualState x:Name="vistaMvl">
+                <VisualState.StateTriggers>
+                    <AdaptiveTrigger MinWindowHeight="0"/>
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <!--<Setter Target="columna1.Width" Value="550"/>-->
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>
+
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid>
+        <Grid x:Name="miGrid">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="350"/>
                 <ColumnDefinition Width="*"/>

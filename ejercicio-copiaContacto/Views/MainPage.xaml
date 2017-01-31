@@ -7,6 +7,18 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup>
+            <VisualState x:Name="vistaMvl">
+                <VisualState.StateTriggers>
+                    <AdaptiveTrigger MinWindowHeight="100"/>
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Target="MySplitView.OpenPaneLength" Value="200"/>
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid>
             <Grid.RowDefinitions>
@@ -17,10 +29,11 @@
             <RelativePanel>
                 <Button Name="HamburgerButton" RelativePanel.AlignLeftWithPanel="True" FontSize="24" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Click="HamburgerButton_Click"/>
             </RelativePanel>
-            <SplitView Grid.Row="1"
-                       Name="MySplitView"
+            <SplitView                      
+                       Grid.Row="1"
+                       x:Name="MySplitView"
                        DisplayMode="CompactOverlay"
-                       OpenPaneLength="300"
+                       OpenPaneLength="400"
                        CompactPaneLength="56">
                 <SplitView.Pane>
                     <ListBox SelectionMode="Single">
