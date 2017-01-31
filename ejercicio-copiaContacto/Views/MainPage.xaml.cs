@@ -6,6 +6,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Core;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -28,7 +29,7 @@ namespace ejercicio_copiaContacto
         public MainPage1()
         {
             this.InitializeComponent();
-
+            ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(200, 150));
             MyFrame.Navigate(typeof(Contactos));
             //TitleTextBlock.Text = "Financial";
 
