@@ -12,7 +12,7 @@
 
     <Style x:Key="estilolbl" TargetType="TextBlock">
         <Setter Property="TextBlock.Foreground" Value="White"/>
-        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontSize" Value="16"/>
         <Setter Property="Margin" Value="5"/>
     </Style>
 </ResourceDictionary>

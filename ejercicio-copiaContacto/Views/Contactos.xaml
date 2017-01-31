@@ -80,7 +80,7 @@
                     <ColumnDefinition Width="7*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <!--CABECERA-->
-                <TextBlock Grid.Column="0" Grid.Row="0" Text="Tus contactos" FontSize="25" Foreground="White" Margin="5"/>
+                <TextBlock Grid.Column="0" Grid.Row="0" Text="Tus contactos" FontSize="23" Foreground="White" Margin="5"/>
                 <StackPanel Orientation="Horizontal"  Grid.Column="1" Grid.Row="0">
                     <AppBarButton Icon="Save" Label="Guardar" Foreground="White"/>
                     <AppBarButton Icon="Cancel" Label="Cancelar" Foreground="White"/>
@@ -123,7 +123,7 @@
                         Style="{StaticResource estiloTextBox}"
                          />
                 <!--DATOS REFERENTES AL TELEFONO-->
-                <TextBlock Text="Telefono:"
+                <TextBlock Text="Teléfono:"
                        x:Name="lblTelefono"
                        Grid.Column="0"
                        Grid.Row="4"
