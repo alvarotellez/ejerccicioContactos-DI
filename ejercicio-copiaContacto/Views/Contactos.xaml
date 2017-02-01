@@ -12,15 +12,34 @@
         <vm:clsMainPageVM></vm:clsMainPageVM>
     </Page.DataContext>
 
-
     <VisualStateManager.VisualStateGroups>
         <VisualStateGroup>
-            <VisualState x:Name="vistaMvl">
+            <VisualState x:Name="Phone">
                 <VisualState.StateTriggers>
-                    <AdaptiveTrigger MinWindowHeight="0"/>
+                    <!--El trigger salta cuando el ancho es 0-->
+                    <AdaptiveTrigger MinWindowWidth="0"/>
                 </VisualState.StateTriggers>
                 <VisualState.Setters>
-                    <!--<Setter Target="columna1.Width" Value="550"/>-->
+                    <Setter Target="lblTusContactos.FontSize" Value="15"/>
+
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState x:Name="Tablet">
+                <VisualState.StateTriggers>
+                    <!--El trigger salta cuando el ancho es 0-->
+                    <AdaptiveTrigger MinWindowWidth="900"/>
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Target="lblTusContactos.FontSize" Value="30"/>
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState x:Name="Desktop">
+                <VisualState.StateTriggers>
+                    <!--El trigger salta cuando el ancho es 0-->
+                    <AdaptiveTrigger MinWindowWidth="1300"/>
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Target="lblTusContactos.FontSize" Value="40"/>
                 </VisualState.Setters>
             </VisualState>
         </VisualStateGroup>
@@ -80,7 +99,7 @@
                     <ColumnDefinition Width="7*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <!--CABECERA-->
-                <TextBlock Grid.Column="0" Grid.Row="0" Text="Tus contactos" FontSize="23" Foreground="White" Margin="5"/>
+                <TextBlock x:Name="lblTusContactos" Grid.Column="0" Grid.Row="0" Text="Tus contactos" Foreground="White" Margin="5" FontSize="40"/>
                 <StackPanel Orientation="Horizontal"  Grid.Column="1" Grid.Row="0">
                     <AppBarButton Icon="Save" Label="Guardar" Foreground="White"/>
                     <AppBarButton Icon="Cancel" Label="Cancelar" Foreground="White"/>

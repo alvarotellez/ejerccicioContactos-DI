@@ -9,12 +9,32 @@
 
     <VisualStateManager.VisualStateGroups>
         <VisualStateGroup>
-            <VisualState x:Name="vistaMvl">
+            <VisualState x:Name="Phone">
                 <VisualState.StateTriggers>
-                    <AdaptiveTrigger MinWindowHeight="100"/>
+                    <!--El trigger salta cuando el ancho es 0-->
+                    <AdaptiveTrigger MinWindowWidth="0"/>
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Target="MySplitView.OpenPaneLength" Value="150"/>
+                                   
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState x:Name="Tablet">
+                <VisualState.StateTriggers>
+                    <!--El trigger salta cuando el ancho es 0-->
+                    <AdaptiveTrigger MinWindowWidth="900"/>
                 </VisualState.StateTriggers>
                 <VisualState.Setters>
                     <Setter Target="MySplitView.OpenPaneLength" Value="200"/>
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState x:Name="Desktop">
+                <VisualState.StateTriggers>
+                    <!--El trigger salta cuando el ancho es 0-->
+                    <AdaptiveTrigger MinWindowWidth="1300"/>
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Target="MySplitView.OpenPaneLength" Value="400"/>
                 </VisualState.Setters>
             </VisualState>
         </VisualStateGroup>
