@@ -99,7 +99,7 @@
                     <ColumnDefinition Width="7*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <!--CABECERA-->
-                <TextBlock x:Name="lblTusContactos" Grid.Column="0" Grid.Row="0" Text="Tus contactos" Foreground="White" Margin="5" FontSize="40"/>
+                <TextBlock x:Name="lblTusContactos" Grid.Column="0" Grid.Row="0" Text="Tus contactos" Foreground="White" Margin="5" FontSize="1"/>
                 <StackPanel Orientation="Horizontal"  Grid.Column="1" Grid.Row="0">
                     <AppBarButton Icon="Save" Label="Guardar" Foreground="White"/>
                     <AppBarButton Icon="Cancel" Label="Cancelar" Foreground="White"/>
