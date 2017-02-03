@@ -12,11 +12,11 @@
         <vm:clsMainPageVM></vm:clsMainPageVM>
     </Page.DataContext>
 
-    <VisualStateManager.VisualStateGroups>
+    <!--<VisualStateManager.VisualStateGroups>
         <VisualStateGroup>
             <VisualState x:Name="Phone">
                 <VisualState.StateTriggers>
-                    <!--El trigger salta cuando el ancho es 0-->
+                    --><!--El trigger salta cuando el ancho es 0--><!--
                     <AdaptiveTrigger MinWindowWidth="0"/>
                 </VisualState.StateTriggers>
                 <VisualState.Setters>
@@ -26,7 +26,7 @@
             </VisualState>
             <VisualState x:Name="Tablet">
                 <VisualState.StateTriggers>
-                    <!--El trigger salta cuando el ancho es 0-->
+                    --><!--El trigger salta cuando el ancho es 0--><!--
                     <AdaptiveTrigger MinWindowWidth="900"/>
                 </VisualState.StateTriggers>
                 <VisualState.Setters>
@@ -35,7 +35,7 @@
             </VisualState>
             <VisualState x:Name="Desktop">
                 <VisualState.StateTriggers>
-                    <!--El trigger salta cuando el ancho es 0-->
+                    --><!--El trigger salta cuando el ancho es 0--><!--
                     <AdaptiveTrigger MinWindowWidth="1300"/>
                 </VisualState.StateTriggers>
                 <VisualState.Setters>
@@ -43,7 +43,7 @@
                 </VisualState.Setters>
             </VisualState>
         </VisualStateGroup>
-    </VisualStateManager.VisualStateGroups>
+    </VisualStateManager.VisualStateGroups>-->
 
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">

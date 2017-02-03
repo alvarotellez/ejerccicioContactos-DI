@@ -29,7 +29,7 @@ namespace ejercicio_copiaContacto
         public MainPage1()
         {
             this.InitializeComponent();
-            //ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(200, 150));
+            ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(200, 150));
             MyFrame.Navigate(typeof(Contactos));
             //TitleTextBlock.Text = "Financial";
 
