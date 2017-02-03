@@ -25,20 +25,24 @@ namespace ejercicio_copiaContacto
     /// </summary>
     public sealed partial class Contactos : Page
     {
+
         public Contactos()
         {
-            ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(200, 150));
+            ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(200, 150));   
             this.InitializeComponent();
+
         }
 
         private void lista_ItemClick(object sender, ItemClickEventArgs e)
         {
-
-            if (ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons"))
+            if(AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Mobile")
             {
-                Frame.Navigate(typeof(Detalle));
+                Frame.Navigate(typeof(Contactos));
             }
-
+            else
+            {
+                Frame.Navigate(typeof(Contactos));
+            }
         }
     }
 }

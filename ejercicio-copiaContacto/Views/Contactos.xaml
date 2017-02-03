@@ -71,7 +71,7 @@
                     <ListView x:Name="lista"
                       Margin="12"
                       ItemsSource="{Binding listado}"
-                      SelectedItem="{Binding personaSeleccionada, Mode=TwoWay}">
+                      SelectedItem="{Binding personaSeleccionada, Mode=TwoWay}" ItemClick="lista_ItemClick">
                         <ListView.ItemTemplate>
                             <DataTemplate >
                                 <StackPanel Orientation="Horizontal">
@@ -84,7 +84,7 @@
                 </ScrollViewer>
             </Grid>
             <!--Detalle-->
-            <Grid Grid.Column="1" DataContext="{Binding personaSeleccionada}" Background="#0078D7" >
+            <Grid Grid.Column="1" DataContext="{Binding personaSeleccionada}" Background="#0078D7" x:Name="miDetalle" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
