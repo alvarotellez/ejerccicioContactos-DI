@@ -62,7 +62,7 @@
                 </Grid.RowDefinitions>
                
                 <RelativePanel Grid.Row="0" Grid.Column="0">
-                    <TextBlock Name="txtContacto" Text="Contactossssss" FontSize="24" Margin="15,0,0,0" Padding="5" x:Uid="ContactostxtCabecera" />
+                    <TextBlock Name="txtContacto" Text="Contactos" FontSize="24" Margin="15,0,0,0" Padding="5" x:Uid="ContactostxtCabecera" />
                     <AppBarButton Icon="Add" RelativePanel.RightOf="txtContacto"/>
                 </RelativePanel>
                 <TextBox Grid.Row="1" FontSize="12" PlaceholderText="Buscar"  Height="20" Width="200" Padding="5"/>
@@ -71,8 +71,7 @@
                     <ListView x:Name="lista"
                       Margin="12"
                       ItemsSource="{Binding listado}"
-                      SelectedItem="{Binding personaSeleccionada, Mode=TwoWay}"
-                              >
+                      SelectedItem="{Binding personaSeleccionada, Mode=TwoWay}">
                         <ListView.ItemTemplate>
                             <DataTemplate >
                                 <StackPanel Orientation="Horizontal">

@@ -36,8 +36,7 @@
                     <ListView x:Name="lista"
                       Margin="12"
                       ItemsSource="{Binding listado}"
-                      SelectedItem="{Binding personaSeleccionada, Mode=TwoWay}"
-                              >
+                      SelectedItem="{Binding personaSeleccionada, Mode=TwoWay}" ItemClick="lista_ItemClick">
                         <ListView.ItemTemplate>
                             <DataTemplate >
                                 <StackPanel Orientation="Horizontal">

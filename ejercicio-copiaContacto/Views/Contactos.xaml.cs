@@ -5,6 +5,8 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Foundation.Metadata;
+using Windows.System.Profile;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -27,6 +29,16 @@ namespace ejercicio_copiaContacto
         {
             ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(200, 150));
             this.InitializeComponent();
+        }
+
+        private void lista_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+            if (ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons"))
+            {
+                Frame.Navigate(typeof(Detalle));
+            }
+
         }
     }
 }
