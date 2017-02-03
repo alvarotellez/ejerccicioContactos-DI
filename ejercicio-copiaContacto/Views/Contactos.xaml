@@ -62,7 +62,7 @@
                 </Grid.RowDefinitions>
                
                 <RelativePanel Grid.Row="0" Grid.Column="0">
-                    <TextBlock Name="txtContacto" Text="Contactos" FontSize="24" Margin="15,0,0,0" Padding="5"/>
+                    <TextBlock Name="txtContacto" Text="Contactossssss" FontSize="24" Margin="15,0,0,0" Padding="5" x:Uid="ContactostxtCabecera" />
                     <AppBarButton Icon="Add" RelativePanel.RightOf="txtContacto"/>
                 </RelativePanel>
                 <TextBox Grid.Row="1" FontSize="12" PlaceholderText="Buscar"  Height="20" Width="200" Padding="5"/>
@@ -107,6 +107,7 @@
 
                 <!--DATOS REFERENTES AL NOMBRE-->
                 <TextBlock Text="Nombre:"
+                           x:Uid="lblNombreDetalle"
                        x:Name="lblNombre" 
                        Grid.Column="0"
                        Grid.Row="1"

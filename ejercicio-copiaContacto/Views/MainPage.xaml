@@ -70,7 +70,7 @@
                                 <TextBlock FontFamily="Segoe MDL2 Assets"
                                            Text="&#xE715;"
                                            Style="{StaticResource estiloBotones}"/>
-                                <TextBlock FontSize="18" Margin="20,0,0,0">Correo</TextBlock>
+                                <TextBlock FontSize="18" Margin="20,0,0,0" x:Uid="lblCorreo">Correo</TextBlock>
                             </StackPanel>
                         </ListBoxItem>
                         <ListBoxItem Name="Calendario">
@@ -78,7 +78,7 @@
                                 <TextBlock FontFamily="Segoe MDL2 Assets"
                                            Text="&#xE787;"
                                            Style="{StaticResource estiloBotones}"/>
-                                <TextBlock FontSize="18" Margin="20,0,0,0">Calendario</TextBlock>
+                                <TextBlock FontSize="18" Margin="20,0,0,0" x:Uid="lblCalendario">Calendario</TextBlock>
                             </StackPanel>
                         </ListBoxItem>
                         <ListBoxItem Name="Configuracion">
@@ -86,7 +86,7 @@
                                 <TextBlock FontFamily="Segoe MDL2 Assets"
                                            Text="&#xE713;"
                                            Style="{StaticResource estiloBotones}"/>
-                                <TextBlock FontSize="18" Margin="20,0,0,0">Configuración</TextBlock>
+                                <TextBlock FontSize="18" Margin="20,0,0,0" x:Uid="lblConfiguracion">Configuración</TextBlock>
                             </StackPanel>
                         </ListBoxItem>
                     </ListBox>
